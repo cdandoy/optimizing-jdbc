@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'org.dandoy'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'com.microsoft.sqlserver', name: 'mssql-jdbc', version: '9.2.0.jre15'
+    compile 'org.apache.commons:commons-lang3:3.11'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.12.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
